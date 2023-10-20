@@ -1,14 +1,123 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/images/favicon-32x32.png"
+    />
     <title>E-commerce product page</title>
   </head>
   <body>
-    <h1>Hello World</h1>
-    <script type="module" src='./src/js/main.js'></script>
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="./src/images/logo.svg" alt="site logo" class="logo__img" />
+      </a>
+      <nav class="nav">
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="#" class="menu__link">Collections</a>
+          </li>
+          <li class="menu__item"><a href="#" class="menu__link">Men</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Women</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+          <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+        </ul>
+      </nav>
+      <nav class="menu menu--buyer">
+        <a href="#" class="menu--buyer__link"
+          ><img
+            src="./src/images/icon-cart.svg"
+            alt="Icon Cart"
+            class="menu--buyer__img"
+        /></a>
+        <a href="#" class="menu--buyer__link"
+          ><img
+            src="./src/images/image-avatar.png"
+            alt="Buyer image"
+            class="menu--buyer__img"
+        /></a>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="product">
+        <div class="product__img-col">
+          <div class="product__img-container">
+            <img
+              src="./src/images/image-product-1.jpg"
+              alt="Sneaker image"
+              class="product__img"
+            />
+          </div>
+          <div class="product__thumbnails">
+            <img
+              src="./src/images/image-product-1-thumbnail.jpg"
+              alt="#"
+              class="product__thumbnail"
+            />
+            <img
+              src="./src/images/image-product-2-thumbnail.jpg"
+              alt="#"
+              class="product__thumbnail"
+            />
+            <img
+              src="./src/images/image-product-3-thumbnail.jpg"
+              alt="#"
+              class="product__thumbnail"
+            />
+            <img
+              src="./src/images/image-product-4-thumbnail.jpg"
+              alt="#"
+              class="product__thumbnail"
+            />
+          </div>
+        </div>
+        <div class="product__info-col">
+          <h2 class="product__title">Sneaker Company</h2>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p class="product__text">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="product__pricing">
+            <div class="product__pricing-first-row">
+              <span class="produt__price">$000.00</span>
+              <span class="product__percentage">00%</span>
+            </div>
+            <div class="product__pricing-second-row">
+              <span class="old__price">$000.00</span>
+            </div>
+          </div>
+          <div class="product__controls">
+            <div class="product__change-amount">
+              <img
+                src="./src/images/icon-minus.svg"
+                alt="+ icon"
+                class="product__icon"
+              />
+              <span class="product__amount">0</span>
+              <img
+                src="./src/images/icon-plus.svg"
+                alt="+ icon"
+                class="product__icon"
+              />
+            </div>
+            <a href="#" class="product__button">
+              <i class="product__icon">
+                <img src="./src/images/icon-cart.svg" />
+              </i>
+              <span class="product__button-span"> Add to cart </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

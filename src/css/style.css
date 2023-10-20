@@ -1,4 +1,15 @@
 body {
-  background-color: rgba(2, 4, 5, 0.904);
+  background-color: rgba(20, 28, 32, 0.904);
   color: rgb(171, 203, 230);
 }
+
+/* Delete */
+.header {
+  border: 2px dotted orangered;
+}
+
+.product__img-col {
+  margin-top: 2em;
+  border: 2px dotted rgb(0, 81, 255);
+}
+/*  */
