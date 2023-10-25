@@ -17,7 +17,6 @@
     <title>E-commerce product page</title>
   </head>
   <body id="body">
-    <!-- <div class="body-filter"></div> -->
     <header class="header">
       <div class="logo-tgl-box">
         <img
@@ -46,7 +45,7 @@
           ><img
             src="./src/images/icon-cart.svg"
             alt="Icon Cart"
-            class="menu--buyer__img"
+            class="menu--buyer__img menu--buyer__img--cart"
         /></a>
         <a href="#" class="menu--buyer__link"
           ><img
@@ -60,41 +59,43 @@
       <section class="product">
         <div class="product__img-col">
           <div class="product__img-container">
-            <img
-              src="./src/images/image-product-1.jpg"
-              alt="Sneaker image"
-              class="product__img"
-              id="product__img"
-              data-num="1"
-            />
+            <div class="thumbnail-box">
+              <img
+                src="./src/images/image-product-1.jpg"
+                alt="Sneaker image"
+                class="product__img"
+                id="product__img"
+                data-num="1"
+              />
+            </div>
             <div class="product__arrows" id="arrows">
               <div class="product__img-arrow product__img-arrow--left" data-type="previous"></div>
               <div class="product__img-arrow product__img-arrow--right" data-type="next"></div>
             </div>
-          </div>
-        </div>
-          <div class="product__thumbnails" id="thumbnails">
-            <img
-              src="./src/images/image-product-1-thumbnail.jpg"
-              alt="#"
-              class="product__thumbnail"
-            />
-            <img
-              src="./src/images/image-product-2-thumbnail.jpg"
-              alt="#"
-              class="product__thumbnail"
-            />
-            <img
-              src="./src/images/image-product-3-thumbnail.jpg"
-              alt="#"
-              class="product__thumbnail"
-            />
-            <img
-              src="./src/images/image-product-4-thumbnail.jpg"
-              alt="#"
-              class="product__thumbnail"
-            />
-          </div>
+            <div class="product__thumbnails" id="thumbnails">
+              <img
+                src="./src/images/image-product-1-thumbnail.jpg"
+                alt="#"
+                class="product__thumbnail"
+              />
+              <img
+                src="./src/images/image-product-2-thumbnail.jpg"
+                alt="#"
+                class="product__thumbnail"
+              />
+              <img
+                src="./src/images/image-product-3-thumbnail.jpg"
+                alt="#"
+                class="product__thumbnail"
+              />
+              <img
+                src="./src/images/image-product-4-thumbnail.jpg"
+                alt="#"
+                class="product__thumbnail"
+              />
+            </div>
+          </div>       
+          </div>          
         </div>
         <div class="product__info-col">
           <h2 class="product__sub-title">Sneaker Company</h2>
@@ -127,7 +128,8 @@
                 alt="+ icon"
                 class="product__icon"
                 data-type="plus"
-              />
+                />
+              </div>
             </div>
             <a href="#" class="product__button">
               <i class="product__icon">
@@ -135,7 +137,6 @@
               </i>
               <span class="product__button-span"> Add to cart </span>
             </a>
-          </div>
         </div>
       </section>
     </main>
