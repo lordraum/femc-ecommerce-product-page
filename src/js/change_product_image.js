@@ -1,4 +1,4 @@
-const changeProductImageMobile = (controls, image, num) => {
+export const changeProductImageMobile = (controls, image, num) => {
   let currentImage = parseInt(image.dataset.num)
   controls.addEventListener('click', (e) => {
     const arrowType = e.target.dataset.type
@@ -22,5 +22,3 @@ const changeProductImageMobile = (controls, image, num) => {
     }
   })
 }
-
-export default changeProductImageMobile

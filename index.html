@@ -16,20 +16,22 @@
     />
     <title>E-commerce product page</title>
   </head>
-  <body>
+  <body id="body">
+    <!-- <div class="body-filter"></div> -->
     <header class="header">
       <div class="logo-tgl-box">
         <img
           src="./src/images/icon-menu.svg"
           alt="menu button"
-          class="toggle-menu"
+          class="toggle-menu close-menu"
+          id="toggle-menu"          
         />
         <a href="#" class="logo">
           <img src="./src/images/logo.svg" alt="site logo" class="logo__img" />
         </a>
       </div>
       <nav class="nav">
-        <ul class="menu">
+        <ul class="menu" id="menu">
           <li class="menu__item">
             <a href="#" class="menu__link">Collections</a>
           </li>
@@ -71,7 +73,7 @@
             </div>
           </div>
         </div>
-          <div class="product__thumbnails">
+          <div class="product__thumbnails" id="thumbnails">
             <img
               src="./src/images/image-product-1-thumbnail.jpg"
               alt="#"
@@ -112,17 +114,19 @@
             </div>
           </div>
           <div class="product__controls">
-            <div class="product__change-amount">
+            <div class="product__change-amount" id="amount-controls">
               <img
                 src="./src/images/icon-minus.svg"
                 alt="+ icon"
                 class="product__icon"
-              />
-              <span class="product__amount">0</span>
-              <img
+                data-type="minus"
+                />
+                <span class="product__amount" id="amount-products">0</span>
+                <img
                 src="./src/images/icon-plus.svg"
                 alt="+ icon"
                 class="product__icon"
+                data-type="plus"
               />
             </div>
             <a href="#" class="product__button">
