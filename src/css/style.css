@@ -118,8 +118,10 @@ body {
   position: absolute;
   top: -0.25rem;
   left: 0.75rem;
-  padding-inline: 0.4rem;
-  padding-block-start: 0.1rem;
+  width: 1rem;
+  height: 0.75rem;
+  line-height: 0.8rem;
+  text-align: center;
   border-radius: 50%;
   font-size: 0.65em;
   background-color: var(--second-bg-clr);
@@ -328,6 +330,11 @@ body {
     justify-content: end;
     align-items: center;
     gap: 2.5rem;
+  }
+
+  .cart__count {
+    left: calc(100% - 40px - 2.5rem - 10px);
+    top: 0.4rem;
   }
 
   .menu--buyer__img {
