@@ -20,5 +20,5 @@ export const renderPrice = (elm, price, hasDiscount, discount) => {
     elm.textContent = `$ ${price * discount / 100}.00`
     renderDiscount(elm.parentElement, discount)
     renderOldPrice(elm.parentElement.parentElement, price)
-  }
+  } else elm.textContent = `$ ${price}.00`
 }
