@@ -110,6 +110,23 @@ body {
   padding-block: 0.75em;
 }
 
+.menu--buyer {
+  position: relative;
+}
+
+.cart__count {
+  position: absolute;
+  top: -0.25rem;
+  left: 0.75rem;
+  padding-inline: 0.4rem;
+  padding-block-start: 0.1rem;
+  border-radius: 50%;
+  font-size: 0.65em;
+  background-color: var(--second-bg-clr);
+  color: var(--fourth-font-clr);
+  font-weight: var(--secondary-fw);
+}
+
 .menu--buyer__img {
   width: 1.45em;
 }

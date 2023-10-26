@@ -7,6 +7,7 @@ export const RenderCartCount = (parent, btn, amountElm) => {
     if (parseInt(amountElm.textContent) > 0) {
       carCount++
       const elm = document.createElement('SPAN')
+      elm.classList.add('cart__count')
       elm.textContent = carCount
       parent.prepend(elm)
     }
