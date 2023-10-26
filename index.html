@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./src/images/favicon-32x32.png"
-    />
+    >
     <title>E-commerce product page</title>
   </head>
   <body id="body">
@@ -23,10 +23,10 @@
           src="./src/images/icon-menu.svg"
           alt="menu button"
           class="toggle-menu close-menu"
-          id="toggle-menu"          
-        />
+          id="toggle-menu"
+        >
         <a href="#" class="logo">
-          <img src="./src/images/logo.svg" alt="site logo" class="logo__img" />
+          <img src="./src/images/logo.svg" alt="site logo" class="logo__img">
         </a>
       </div>
       <nav class="nav">
@@ -34,25 +34,27 @@
           <li class="menu__item">
             <a href="#" class="menu__link">Collections</a>
           </li>
-          <li class="menu__item"><a href="#" class="menu__link">Men</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Women</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">About</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Men</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Women</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">About</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Contact</a>
+          </li>
         </ul>
       </nav>
       <nav class="menu--buyer">
-        <a href="#" class="menu--buyer__link"
-          ><img
-            src="./src/images/icon-cart.svg"
-            alt="Icon Cart"
-            class="menu--buyer__img menu--buyer__img--cart"
-        /></a>
-        <a href="#" class="menu--buyer__link"
-          ><img
-            src="./src/images/image-avatar.png"
-            alt="Buyer image"
-            class="menu--buyer__img"
-        /></a>
+        <a href="#" class="menu--buyer__link">
+          <img src="./src/images/icon-cart.svg" alt="Icon Cart" class="menu--buyer__img menu--buyer__img--cart">
+        </a>
+        <a href="#" class="menu--buyer__link">
+          <img src="./src/images/image-avatar.png" alt="Buyer image" class="menu--buyer__img">
+        </a>
       </nav>
     </header>
     <main class="main">
@@ -66,80 +68,62 @@
                 class="product__img"
                 id="product__img"
                 data-num="1"
-              />
+              >
             </div>
             <div class="product__arrows" id="arrows">
               <div class="product__img-arrow product__img-arrow--left" data-type="previous"></div>
               <div class="product__img-arrow product__img-arrow--right" data-type="next"></div>
             </div>
             <div class="product__thumbnails" id="thumbnails">
-              <img
-                src="./src/images/image-product-1-thumbnail.jpg"
-                alt="#"
-                class="product__thumbnail"
-              />
-              <img
-                src="./src/images/image-product-2-thumbnail.jpg"
-                alt="#"
-                class="product__thumbnail"
-              />
-              <img
-                src="./src/images/image-product-3-thumbnail.jpg"
-                alt="#"
-                class="product__thumbnail"
-              />
-              <img
-                src="./src/images/image-product-4-thumbnail.jpg"
-                alt="#"
-                class="product__thumbnail"
-              />
-            </div>
-          </div>       
-          </div>          
-        </div>
-        <div class="product__info-col">
-          <h2 class="product__sub-title">Sneaker Company</h2>
-          <h1 class="product__title">Fall Limited Edition Sneakers</h1>
-          <p class="product__text">
-            These low-profile sneakers are your perfect casual wear companion.
-            Featuring a durable rubber outer sole, they’ll withstand everything
-            the weather can offer.
-          </p>
-          <div class="product__pricing">
-            <div class="product__pricing-first-row">
-              <span class="produt__price">$ 125.00</span>
-              <span class="product__percentage">50%</span>
-            </div>
-            <div class="product__pricing-second-row">
-              <span class="old__price">$ 250.00</span>
+              <img src="./src/images/image-product-1-thumbnail.jpg" alt="#" class="product__thumbnail">
+              <img src="./src/images/image-product-2-thumbnail.jpg" alt="#" class="product__thumbnail">
+              <img src="./src/images/image-product-3-thumbnail.jpg" alt="#" class="product__thumbnail">
+              <img src="./src/images/image-product-4-thumbnail.jpg" alt="#" class="product__thumbnail">
             </div>
           </div>
-          <div class="product__controls">
-            <div class="product__change-amount" id="amount-controls">
-              <img
-                src="./src/images/icon-minus.svg"
-                alt="+ icon"
-                class="product__icon"
-                data-type="minus"
-                />
-                <span class="product__amount" id="amount-products">0</span>
-                <img
-                src="./src/images/icon-plus.svg"
-                alt="+ icon"
-                class="product__icon"
-                data-type="plus"
-                />
-              </div>
-            </div>
-            <a href="#" class="product__button">
-              <i class="product__icon">
-                <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"/></svg>
-              </i>
-              <span class="product__button-span"> Add to cart </span>
-            </a>
         </div>
-      </section>
-    </main>
-    <script type="module" src="./src/js/main.js"></script>
-  </body>
+      </div>
+      <div class="product__info-col">
+        <h2 class="product__sub-title">Sneaker Company</h2>
+        <h1 class="product__title">Fall Limited Edition Sneakers</h1>
+        <p class="product__text">
+          These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+        </p>
+        <div class="product__pricing">
+          <div class="product__pricing-first-row">
+            <span class="produt__price" id="price-elm"></span>
+          </div>
+        </div>
+        <div class="product__controls">
+          <div class="product__change-amount" id="amount-controls">
+            <img
+              src="./src/images/icon-minus.svg"
+              alt="+ icon"
+              class="product__icon"
+              data-type="minus"
+            >
+            <span class="product__amount" id="amount-products">0</span>
+            <img
+              src="./src/images/icon-plus.svg"
+              alt="+ icon"
+              class="product__icon"
+              data-type="plus"
+            >
+          </div>
+        </div>
+        <a href="#" class="product__button">
+          <i class="product__icon">
+            <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"/>
+            </svg>
+          </i>
+          <span class="product__button-span"> Add to cart</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./src/js/main.js"></script>
+</body>
 </html>
