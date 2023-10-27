@@ -1,3 +1,6 @@
+import menuImg from '../images/icon-menu.svg'
+import closeImg from '../images/icon-close.svg'
+
 const toggleMenu = (toggle, menu, menuClass, body) => {
   toggle.addEventListener('click', (_) => {
     const bodyFilter = document.createElement('DIV')
@@ -5,10 +8,10 @@ const toggleMenu = (toggle, menu, menuClass, body) => {
     if (menu.classList.contains('menu--active')) {
       bodyFilter.classList.toggle('body-filter')
       body.prepend(bodyFilter)
-      toggle.attributes.src.value = 'src/images/icon-close.svg'
+      toggle.attributes.src.value = closeImg
     } else {
       body.removeChild(body.firstChild)
-      toggle.attributes.src.value = 'src/images/icon-menu.svg'
+      toggle.attributes.src.value = menuImg
     }
   })
 }
