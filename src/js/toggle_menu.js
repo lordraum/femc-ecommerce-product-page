@@ -8,10 +8,10 @@ const toggleMenu = (toggle, menu, menuClass, body) => {
     if (menu.classList.contains('menu--active')) {
       bodyFilter.classList.toggle('body-filter')
       body.prepend(bodyFilter)
-      toggle.attributes.src.value = closeImg
+      toggle.src = closeImg
     } else {
       body.removeChild(body.firstChild)
-      toggle.attributes.src.value = menuImg
+      toggle.src = menuImg
     }
   })
 }
