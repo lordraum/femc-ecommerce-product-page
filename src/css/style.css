@@ -141,6 +141,14 @@ body {
   position: relative;
 }
 
+.product__img {
+  max-width: none;
+  height: 325px;
+  width: 101%;
+  object-fit: cover;
+  border: 1px solid;
+}
+
 .product__info-col {
   padding: var(--col-info-padding);
 }
@@ -277,6 +285,11 @@ body {
 
 .product__icon svg {
   fill: currentColor;
+}
+
+.cart {
+  position: absolute;
+  top: 0;
 }
 
 /* end mobile */

@@ -51,4 +51,4 @@ renderPrice(priceElm, product.price, product.hasDiscount, product.discount)
 renderCartIcon(cartBox, cartButton)
 renderCart(section, cartIcon)
 
-localStorage.clear()
+/* localStorage.clear() */

@@ -10,6 +10,8 @@ const renderCart = (parent, cartIcon) => {
     const header = cartHeader()
     const empty = document.createElement('DIV')
 
+    box.classList.add('cart')
+
     if (!isActive) {
       box.append(header)
 
