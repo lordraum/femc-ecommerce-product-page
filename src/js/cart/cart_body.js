@@ -1,9 +1,18 @@
+/* eslint-disable no-undef */
 import thumbnail from '../../images/image-product-1-thumbnail.jpg'
+import deleteImg from '../../images/icon-delete.svg'
 
-const cartBody = () => {
+const cartBody = (data) => {
+  const fragment = document.createDocumentFragment()
   const box = document.createElement('DIV')
-  const img = imgCol()
-  box.append(img)
+
+  data.forEach(x => {
+    const row = document.createElement('DIV')
+    row.append(imgCol(), infoCol(x), deleteCol())
+    fragment.append(row)
+  })
+
+  box.append(fragment)
   return box
 }
 
@@ -15,20 +24,20 @@ const imgCol = () => {
   return box
 }
 
-const infoCol = (title, priceValue, amountValue, hasDiscount, discountValue) => {
+const infoCol = ({ name, price, amount, hasDiscount, discount }) => {
   const box = document.createElement('DIV')
   const rowOne = document.createElement('DIV')
   const rowTwo = document.createElement('DIV')
-  const infoTitle = document.createElement('DIV')
+  const title = document.createElement('DIV')
   const priceAndAmount = document.createElement('SPAN')
   const total = document.createElement('SPAN')
+  const finalPrice = !hasDiscount ? price : price * discount / 100
 
-  infoTitle.textContent = title
+  title.textContent = name
+  priceAndAmount.textContent = `$ ${finalPrice}.00 x ${amount}`
+  total.textContent = `$ ${finalPrice * amount}.00`
+
   rowOne.append(title)
-
-  priceAndAmount.textContent = `$ ${priceValue}.00 x ${amountValue}`
-  total.textContent = !hasDiscount ? `$ ${priceValue * priceAndAmount}.00` : `$ ${priceValue * discountValue / 100}.00`
-
   rowTwo.append(priceAndAmount, total)
 
   box.append(rowOne, rowTwo)

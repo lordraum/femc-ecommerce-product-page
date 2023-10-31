@@ -133,6 +133,10 @@ body {
   width: 1.45em;
 }
 
+.product {
+  position: relative;
+}
+
 .product__img-col {
   position: relative;
 }

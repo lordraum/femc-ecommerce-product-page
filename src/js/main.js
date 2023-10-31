@@ -1,11 +1,12 @@
+/* eslint-disable no-undef */
 import 'normalize.css'
 import { changeProductImageMobile } from './change_product_image'
 import changeProductAmount from './change_product_amount'
 import toggleMenu from './toggle_menu'
 import { renderPrice } from './render_price'
 import product from './product'
-import { RenderCartCount } from './cartCount'
-import { cart } from './cart/cart'
+import renderCartIcon from './cart/cart_icon'
+import renderCart from './cart/cart'
 
 const imageControls = document.getElementById('arrows')
 const productImage = document.getElementById('product__img')
@@ -19,30 +20,35 @@ const cartBox = document.getElementById('cart-box')
 const cartButton = document.getElementById('cart-button')
 const cartIcon = document.getElementById('cart-icon')
 const body = document.getElementById('body')
-const header = document.getElementById('header') /* Delete */
+const section = document.getElementById('section')
 
 const reset = thumbNails.children.length
 const stock = 12
 const menuClass = 'menu--active'
+
+window.addEventListener('load', (_) => cartButton.click())
 
 const productData = []
 
 cartButton.addEventListener('click', (e) => {
   if (amountProducts.textContent > 0) {
     productData.push({
+      name: product.name,
       price: product.price,
       amount: amountProducts.textContent,
       hasDiscount: product.hasDiscount,
       discount: product.discount
     })
+    localStorage.setItem('cartData', JSON.stringify(productData))
   }
+  amountProducts.textContent = 0
 })
-
-console.log(productData)
 
 changeProductImageMobile(imageControls, productImage, reset)
 changeProductAmount(amountControls, amountProducts, stock)
 toggleMenu(toggle, menu, menuClass, body)
 renderPrice(priceElm, product.price, product.hasDiscount, product.discount)
-RenderCartCount(cartBox, cartButton, amountProducts)
-cart(header, cartIcon)
+renderCartIcon(cartBox, cartButton)
+renderCart(section, cartIcon)
+
+// localStorage.clear()

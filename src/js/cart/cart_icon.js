@@ -1,15 +1,16 @@
-export let cartCount = 0
-
-export const RenderCartCount = (parent, btn, amountElm) => {
+const renderCartIcon = (parent, btn) => {
   btn.addEventListener('click', (e) => {
+    // eslint-disable-next-line no-undef
+    const data = JSON.parse(localStorage.getItem('cartData'))
     e.preventDefault()
     parent.children.length > 2 && parent.removeChild(parent.firstChild)
-    if (parseInt(amountElm.textContent) > 0) {
-      cartCount++
+    if (data) {
       const elm = document.createElement('SPAN')
       elm.classList.add('cart__count')
-      elm.textContent = cartCount
+      elm.textContent = data.length
       parent.prepend(elm)
     }
   })
 }
+
+export default renderCartIcon

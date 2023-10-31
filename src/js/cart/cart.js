@@ -1,25 +1,23 @@
-/* import deleteImg from '../images/icon-delete.svg' */
+/* eslint-disable no-undef */
 import cartHeader from './cart_header'
-import { cartCount } from '../cartCount'
 import cartBody from './cart_body'
-
-const box = document.createElement('DIV')
-const header = cartHeader()
-const body = cartBody()
-const empty = document.createElement('DIV')
 let isActive = false
 
-export const cart = (parent, cartIcon) => {
+const renderCart = (parent, cartIcon) => {
   cartIcon.addEventListener('click', (e) => {
+    const data = JSON.parse(localStorage.getItem('cartData'))
+    const box = document.createElement('DIV')
+    const header = cartHeader()
+    const empty = document.createElement('DIV')
+
     if (!isActive) {
       box.append(header)
 
-      if (cartCount < 1) {
+      if (!data) {
         empty.textContent = 'The car is empty'
         box.append(empty)
-      }
-
-      if (cartCount > 0) {
+      } else {
+        const body = cartBody(data)
         empty.remove()
         box.append(body)
       }
@@ -31,3 +29,5 @@ export const cart = (parent, cartIcon) => {
     }
   })
 }
+
+export default renderCart
