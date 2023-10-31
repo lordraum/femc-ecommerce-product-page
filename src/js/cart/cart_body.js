@@ -5,9 +5,11 @@ import deleteImg from '../../images/icon-delete.svg'
 const cartBody = (data) => {
   const fragment = document.createDocumentFragment()
   const box = document.createElement('DIV')
+  box.classList.add('cart__body')
 
   data.forEach(x => {
     const row = document.createElement('DIV')
+    row.classList.add('cart__product')
     row.append(imgCol(), infoCol(x), deleteCol())
     fragment.append(row)
   })
@@ -32,6 +34,8 @@ const infoCol = ({ name, price, amount, hasDiscount, discount }) => {
   const priceAndAmount = document.createElement('SPAN')
   const total = document.createElement('SPAN')
   const finalPrice = !hasDiscount ? price : price * discount / 100
+
+  title.classList.add('cart__product-title')
 
   title.textContent = name
   priceAndAmount.textContent = `$ ${finalPrice}.00 x ${amount}`
