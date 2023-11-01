@@ -7,10 +7,10 @@ const cartBody = (data) => {
   const box = document.createElement('DIV')
   box.classList.add('cart__body')
 
-  data.forEach(x => {
+  data.forEach((x, i) => {
     const row = document.createElement('DIV')
     row.classList.add('cart__product')
-    row.append(imgCol(), infoCol(x), deleteCol())
+    row.append(imgCol(), infoCol(x), deleteCol(i))
     fragment.append(row)
   })
 
@@ -49,10 +49,11 @@ const infoCol = ({ name, price, amount, hasDiscount, discount }) => {
   return box
 }
 
-const deleteCol = () => {
+const deleteCol = (v) => {
   const box = document.createElement('DIV')
   const elm = document.createElement('IMG')
   elm.src = deleteImg
+  elm.setAttribute('data-key', v)
   box.append(elm)
   return box
 }

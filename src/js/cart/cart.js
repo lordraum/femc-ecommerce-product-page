@@ -2,11 +2,12 @@
 import cartHeader from './cart_header'
 import cartBody from './cart_body'
 import cartFooter from './cart_footer'
-let isActive = false
+export let isActive = false
 
 const renderCart = (parent, cartIcon) => {
   cartIcon.addEventListener('click', (e) => {
     const data = JSON.parse(localStorage.getItem('cartData'))
+    console.log(data)
     const box = document.createElement('DIV')
     const header = cartHeader()
     const footer = cartFooter()
@@ -18,7 +19,7 @@ const renderCart = (parent, cartIcon) => {
     if (!isActive) {
       box.append(header)
 
-      if (!data) {
+      if (!data || data.length === 0) {
         empty.textContent = 'Your cart is empty.'
         box.append(empty)
       } else {
@@ -27,6 +28,7 @@ const renderCart = (parent, cartIcon) => {
         box.append(body, footer)
       }
       parent.append(box)
+      // disparar evento personalizado
       isActive = true
     } else {
       parent.removeChild(parent.lastElementChild)

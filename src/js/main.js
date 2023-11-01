@@ -7,6 +7,7 @@ import { renderPrice } from './render_price'
 import product from './product'
 import renderCartIcon from './cart/cart_icon'
 import renderCart from './cart/cart'
+import deleteProduct from './cart/delete_product'
 
 const imageControls = document.getElementById('arrows')
 const productImage = document.getElementById('product__img')
@@ -50,5 +51,6 @@ toggleMenu(toggle, menu, menuClass, body)
 renderPrice(priceElm, product.price, product.hasDiscount, product.discount)
 renderCartIcon(cartBox, cartButton)
 renderCart(section, cartIcon)
+deleteProduct(section, cartButton, cartIcon)
 
 localStorage.clear()

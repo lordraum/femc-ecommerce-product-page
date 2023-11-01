@@ -5,10 +5,12 @@ const renderCartIcon = (parent, btn) => {
     e.preventDefault()
     parent.children.length > 2 && parent.removeChild(parent.firstChild)
     if (data) {
-      const elm = document.createElement('SPAN')
-      elm.classList.add('cart__count')
-      elm.textContent = data.length
-      parent.prepend(elm)
+      if (data.length > 0) {
+        const elm = document.createElement('SPAN')
+        elm.classList.add('cart__count')
+        elm.textContent = data.length
+        parent.prepend(elm)
+      }
     }
   })
 }
