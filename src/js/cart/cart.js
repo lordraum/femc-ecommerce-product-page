@@ -7,7 +7,6 @@ export let isActive = false
 const renderCart = (parent, cartIcon) => {
   cartIcon.addEventListener('click', (e) => {
     const data = JSON.parse(localStorage.getItem('cartData'))
-    console.log(data)
     const box = document.createElement('DIV')
     const header = cartHeader()
     const footer = cartFooter()

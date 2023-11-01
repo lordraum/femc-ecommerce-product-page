@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import 'normalize.css'
-import { changeProductImageMobile } from './change_product_image'
+import { changeProductImageMobile, changeProductImageDesktop } from './change_product_image'
 import changeProductAmount from './change_product_amount'
 import toggleMenu from './toggle_menu'
 import { renderPrice } from './render_price'
@@ -22,6 +22,7 @@ const cartButton = document.getElementById('cart-button')
 const cartIcon = document.getElementById('cart-icon')
 const body = document.getElementById('body')
 const section = document.getElementById('section')
+const thumbnails = document.getElementById('thumbnails')
 
 const reset = thumbNails.children.length
 const stock = 12
@@ -46,6 +47,7 @@ cartButton.addEventListener('click', (e) => {
 })
 
 changeProductImageMobile(imageControls, productImage, reset)
+changeProductImageDesktop(thumbnails, productImage)
 changeProductAmount(amountControls, amountProducts, stock)
 toggleMenu(toggle, menu, menuClass, body)
 renderPrice(priceElm, product.price, product.hasDiscount, product.discount)

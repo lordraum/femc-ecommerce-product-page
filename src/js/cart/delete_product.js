@@ -5,8 +5,10 @@ const deleteProduct = (section, cartBtn, cartIcn) => {
       const ref = elm.src
       if (ref.includes('delete')) {
         const id = elm.dataset.key
+        // eslint-disable-next-line no-undef
         const data = JSON.parse(localStorage.getItem('cartData'))
         const newData = data.filter((_, i) => i !== parseInt(id))
+        // eslint-disable-next-line no-undef
         localStorage.setItem('cartData', JSON.stringify(newData))
 
         cartBtn.click()

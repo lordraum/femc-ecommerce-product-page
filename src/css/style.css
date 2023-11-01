@@ -25,6 +25,7 @@ li {
 
 :root {
   --primary-bg-clr: rgb(40, 53, 59);
+  --primary-bg-clr: white;
   --second-bg-clr: hsl(26, 100%, 55%);
   --third-bg-color: hsl(25, 100%, 94%);
   --fourth-bg-color: hsl(215, 44%, 92%);
@@ -475,6 +476,12 @@ body {
     width: calc(25% - (4.5rem / 4));
   }
 
+  [data-active="1"],
+  .product__thumbnail:hover {
+    border: 2px solid var(--third-font-clr);
+    filter: opacity(60%);
+  }
+
   .product__info-col {
     padding: 0;
   }
@@ -482,6 +489,8 @@ body {
   .product__sub-title {
     margin: 0;
   }
+
+  /* delete */
 
   .product__title {
     font-size: 2em;

@@ -29,3 +29,18 @@ export const changeProductImageMobile = (controls, image, num) => {
     }
   })
 }
+
+export const changeProductImageDesktop = (thumbnails, img) => {
+  thumbnails.addEventListener('click', (e) => {
+    if (e.target.src) {
+      const key = e.target.dataset.key
+      img.src = productImages[key]
+      activeImage(thumbnails, key)
+    }
+  })
+}
+
+const activeImage = (thumbnails, key) => {
+  const arr = Array.from(thumbnails.children)
+  arr.forEach(x => x.setAttribute('data-active', `${x.dataset.key === key ? 1 : 0}`))
+}
