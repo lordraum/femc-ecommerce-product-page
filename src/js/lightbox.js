@@ -1,4 +1,5 @@
 import closeImg from '../images/icon-close-lightbox.svg'
+import { changeProductImageDesktop, changeProductImageMobile } from './change_product_image'
 
 export const createLightBox = (prodImgElm, parent) => {
   const lightBox = prodImgElm.cloneNode(true)
@@ -27,4 +28,12 @@ export const closeLightBox = () => {
   close.addEventListener('click', (e) => {
     lightBox.remove()
   })
+}
+
+export const changeImageLightBox = () => {
+  const lightBoxImage = document.getElementById('lightbox-image')
+  const lightBoxArrows = document.getElementById('lightbox-arrows')
+  const lightBoxThumbnails = document.getElementById('lightbox-thumbnails')
+  changeProductImageMobile(lightBoxArrows, lightBoxImage)
+  changeProductImageDesktop(lightBoxThumbnails, lightBoxImage)
 }

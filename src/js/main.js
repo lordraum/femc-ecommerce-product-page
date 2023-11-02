@@ -8,7 +8,7 @@ import product from './product'
 import renderCartIcon from './cart/cart_icon'
 import renderCart from './cart/cart'
 import deleteProduct from './cart/delete_product'
-import { createLightBox, closeLightBox } from './lightbox'
+import { createLightBox, closeLightBox, changeImageLightBox } from './lightbox'
 
 const imageControls = document.getElementById('arrows')
 const productImage = document.getElementById('product__img')
@@ -49,9 +49,9 @@ cartButton.addEventListener('click', (e) => {
 })
 
 productImage.addEventListener('click', () => {
-  const lightBox = document.getElementById('lightbox')
   createLightBox(prodImgElm, body)
-  closeLightBox(lightBox)
+  changeImageLightBox()
+  closeLightBox()
 })
 
 changeProductImageMobile(imageControls, productImage)
