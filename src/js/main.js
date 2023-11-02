@@ -22,15 +22,15 @@ const cartButton = document.getElementById('cart-button')
 const cartIcon = document.getElementById('cart-icon')
 const body = document.getElementById('body')
 const section = document.getElementById('section')
-const thumbnails = document.getElementById('thumbnails')
 
-const reset = thumbNails.children.length
 const stock = 12
 const menuClass = 'menu--active'
-
-window.addEventListener('load', (_) => cartButton.click())
-
 const productData = []
+
+window.addEventListener('load', () => {
+  cartButton.click()
+  localStorage.setItem('current-image', 1)
+})
 
 cartButton.addEventListener('click', (e) => {
   if (amountProducts.textContent > 0) {
@@ -46,8 +46,8 @@ cartButton.addEventListener('click', (e) => {
   amountProducts.textContent = 0
 })
 
-changeProductImageMobile(imageControls, productImage, reset)
-changeProductImageDesktop(thumbnails, productImage)
+changeProductImageMobile(imageControls, productImage)
+changeProductImageDesktop(thumbNails, productImage)
 changeProductAmount(amountControls, amountProducts, stock)
 toggleMenu(toggle, menu, menuClass, body)
 renderPrice(priceElm, product.price, product.hasDiscount, product.discount)
