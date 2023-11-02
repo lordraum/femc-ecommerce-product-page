@@ -22,11 +22,12 @@ export const createLightBox = (prodImgElm, parent) => {
   parent.append(lightBox)
 }
 
-export const closeLightBox = () => {
+export const closeLightBox = (body) => {
   const close = document.getElementById('close-lightbox')
   const lightBox = document.getElementById('lightbox')
   close.addEventListener('click', (e) => {
     lightBox.remove()
+    body.removeChild(body.firstChild)
   })
 }
 
@@ -34,6 +35,6 @@ export const changeImageLightBox = () => {
   const lightBoxImage = document.getElementById('lightbox-image')
   const lightBoxArrows = document.getElementById('lightbox-arrows')
   const lightBoxThumbnails = document.getElementById('lightbox-thumbnails')
-  changeProductImageMobile(lightBoxArrows, lightBoxImage)
+  changeProductImageMobile(lightBoxArrows, lightBoxThumbnails)
   changeProductImageDesktop(lightBoxThumbnails, lightBoxImage)
 }

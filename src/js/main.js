@@ -9,6 +9,7 @@ import renderCartIcon from './cart/cart_icon'
 import renderCart from './cart/cart'
 import deleteProduct from './cart/delete_product'
 import { createLightBox, closeLightBox, changeImageLightBox } from './lightbox'
+import { bodyFilter } from './body-filter'
 
 const imageControls = document.getElementById('arrows')
 const productImage = document.getElementById('product__img')
@@ -51,10 +52,11 @@ cartButton.addEventListener('click', (e) => {
 productImage.addEventListener('click', () => {
   createLightBox(prodImgElm, body)
   changeImageLightBox()
-  closeLightBox()
+  bodyFilter(body)
+  closeLightBox(body)
 })
 
-changeProductImageMobile(imageControls, productImage)
+changeProductImageMobile(imageControls, thumbNails)
 changeProductImageDesktop(thumbNails, productImage)
 changeProductAmount(amountControls, amountProducts, stock)
 toggleMenu(toggle, menu, menuClass, body)
