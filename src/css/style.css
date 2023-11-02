@@ -448,6 +448,9 @@ body {
 
   .product__img-col {
     position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
   }
 
   .product__img {
@@ -456,8 +459,7 @@ body {
     object-fit: fill;
   }
 
-  .product__img,
-  .product__thumbnails img {
+  .product__img {
     border-radius: var(--br);
   }
 
@@ -466,22 +468,29 @@ body {
   }
 
   .product__thumbnails {
-    margin-top: 1.75rem;
     display: flex;
     gap: 1.5rem;
   }
 
-  .product__thumbnail {
-    width: calc(25% - (4.5rem / 4));
+  .product__thumbnail-box {
+    font-size: 0;
+    border-radius: var(--br);
+    background-color: var(--primary-bg-clr);
+    border-radius: 9px;
   }
 
-  [data-active="1"],
-  .product__thumbnail:hover {
-    filter: opacity(60%);
+  .product__thumbnail {
+    border-radius: var(--br);
   }
 
   [data-active="1"] {
     border: 2px solid var(--third-font-clr);
+    font-size: 0;
+  }
+
+  [data-active="1"] .product__thumbnail,
+  .product__thumbnail:hover {
+    filter: opacity(70%);
   }
 
   .product__info-col {
@@ -535,20 +544,60 @@ body {
   }
 
   .lightbox {
-    display: grid;
-    place-items: center center;
     position: absolute;
     top: 0;
-    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    width: 100%;
     height: 100vh;
   }
 
   .lightbox .product__img-container {
-    width: 38%;
+    position: relative;
     text-align: right;
+    width: 33%;
   }
 
   .lightbox .product__img {
     margin-top: 1rem;
+  }
+
+  .lightbox .product__img-container img:nth-child(1) {
+    width: 1.25rem;
+  }
+
+  .lightbox .product__arrows {
+    display: block;
+  }
+
+  .product__img-arrow {
+    top: calc(50% - (2.75rem / 2) + (36px / 2));
+  }
+
+  .product__img-arrow--left {
+    left: -22px;
+  }
+
+  .product__img-arrow--right {
+    right: -22px;
+  }
+
+  .lightbox .product__img-arrow {
+    background-color: white; /* delete */
+  }
+
+  .lightbox .product__thumbnails {
+    width: 28%;
+  }
+
+  .lightbox .product__thumbnail-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .lightbox .product__thumbnail {
+    height: 100%;
   }
 }

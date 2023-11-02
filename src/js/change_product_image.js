@@ -46,5 +46,5 @@ export const changeProductImageDesktop = (thumbnails, img) => {
 
 const activeImage = (thumbnails, key) => {
   const arr = Array.from(thumbnails.children)
-  arr.forEach(x => x.setAttribute('data-active', `${x.dataset.key === key ? 1 : 0}`))
+  arr.forEach(x => x.setAttribute('data-active', `${x.children[0].dataset.key === key ? 1 : 0}`))
 }

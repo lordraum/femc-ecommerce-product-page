@@ -1,23 +1,30 @@
 import closeImg from '../images/icon-close-lightbox.svg'
 
-const createLightbox = (prodImgElm) => {
-  const lightbox = prodImgElm.cloneNode(true)
-  const imgBox = lightbox.children[0]
-  const image = imgBox.children[0].children[0]
+export const createLightBox = (prodImgElm, parent) => {
+  const lightBox = prodImgElm.cloneNode(true)
+  const imgBox = lightBox.children[0]
+  const image = imgBox.children[0]
   const arrows = imgBox.children[1]
-  const thumbnails = imgBox.children[2]
+  const thumbnails = lightBox.children[1]
   const close = document.createElement('IMG')
   close.src = closeImg
 
-  lightbox.setAttribute('id', 'lightbox')
-  lightbox.classList.add('lightbox')
+  lightBox.setAttribute('id', 'lightbox')
+  lightBox.classList.add('lightbox')
   image.setAttribute('id', 'lightbox-image')
   arrows.setAttribute('id', 'lightbox-arrows')
   thumbnails.setAttribute('id', 'lightbox-thumbnails')
+  close.setAttribute('id', 'close-lightbox')
 
   imgBox.prepend(close)
 
-  return lightbox
+  parent.append(lightBox)
 }
 
-export default createLightbox
+export const closeLightBox = () => {
+  const close = document.getElementById('close-lightbox')
+  const lightBox = document.getElementById('lightbox')
+  close.addEventListener('click', (e) => {
+    lightBox.remove()
+  })
+}
