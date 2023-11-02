@@ -533,4 +533,22 @@ body {
     top: -82px;
     left: 72%;
   }
+
+  .lightbox {
+    display: grid;
+    place-items: center center;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .lightbox .product__img-container {
+    width: 38%;
+    text-align: right;
+  }
+
+  .lightbox .product__img {
+    margin-top: 1rem;
+  }
 }

@@ -8,6 +8,7 @@ import product from './product'
 import renderCartIcon from './cart/cart_icon'
 import renderCart from './cart/cart'
 import deleteProduct from './cart/delete_product'
+import renderLightbox from './lightbox'
 
 const imageControls = document.getElementById('arrows')
 const productImage = document.getElementById('product__img')
@@ -22,6 +23,7 @@ const cartButton = document.getElementById('cart-button')
 const cartIcon = document.getElementById('cart-icon')
 const body = document.getElementById('body')
 const section = document.getElementById('section')
+const prodImgElm = document.getElementById('prod-img-elm')
 
 const stock = 12
 const menuClass = 'menu--active'
@@ -48,11 +50,14 @@ cartButton.addEventListener('click', (e) => {
 
 changeProductImageMobile(imageControls, productImage)
 changeProductImageDesktop(thumbNails, productImage)
+const foo = renderLightbox(prodImgElm)
 changeProductAmount(amountControls, amountProducts, stock)
 toggleMenu(toggle, menu, menuClass, body)
 renderPrice(priceElm, product.price, product.hasDiscount, product.discount)
 renderCartIcon(cartBox, cartButton)
 renderCart(section, cartIcon)
 deleteProduct(section, cartButton, cartIcon)
+
+body.append(foo)
 
 localStorage.clear()
