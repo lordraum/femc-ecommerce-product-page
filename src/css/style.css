@@ -136,7 +136,7 @@ body {
   border-radius: 50%;
   font-size: 0.65em;
   background-color: var(--second-bg-clr);
-  color: var(--fourth-font-clr);
+  color: white;
   font-weight: var(--secondary-fw);
 }
 
@@ -446,7 +446,6 @@ body {
   .cart__count {
     left: calc(100% - 40px - 2.5rem - 10px);
     top: 0.4rem;
-    color: white;
   }
 
   .menu--buyer__img {
