@@ -403,6 +403,7 @@ body {
   .product__thumbnail,
   .product__icon,
   .product__img,
+  .product__img-arrow,
   .lightbox .product__img-container img:nth-child(1),
   .cart__body div:nth-child(3) {
     cursor: pointer;
@@ -600,6 +601,7 @@ body {
 
   .lightbox .product__img {
     margin-top: 1rem;
+    cursor: default;
   }
 
   .lightbox .product__img-container img:nth-child(1) {
