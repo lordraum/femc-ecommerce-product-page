@@ -383,6 +383,22 @@ body {
 
 /* desktop */
 
+@media (width > 440px) {
+  .header,
+  .main {
+    width: 85%;
+    margin-inline: auto;
+  }
+}
+
+@media (width > 800px) {
+  .header,
+  .main {
+    width: 70%;
+    margin-inline: auto;
+  }
+}
+
 @media (width > 1100px) {
   /* custom properties desktop */
 
