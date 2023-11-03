@@ -394,7 +394,7 @@ body {
 @media (width > 800px) {
   .header,
   .main {
-    width: 70%;
+    width: 72.5%;
     margin-inline: auto;
   }
 }
@@ -612,7 +612,7 @@ body {
   .lightbox .product__img-container {
     position: relative;
     text-align: right;
-    width: 33%;
+    width: 24%;
   }
 
   .lightbox .product__img {
