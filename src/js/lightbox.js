@@ -1,4 +1,5 @@
 import closeImg from '../images/icon-close-lightbox.svg'
+import { bodyFilter } from './body-filter'
 import { changeProductImageDesktop, changeProductImageMobile } from './change_product_image'
 
 export const createLightBox = (prodImgElm, parent) => {
@@ -20,6 +21,7 @@ export const createLightBox = (prodImgElm, parent) => {
   imgBox.prepend(close)
 
   parent.append(lightBox)
+  bodyFilter(parent, 'body-filter--lightbox')
 }
 
 export const closeLightBox = (body) => {

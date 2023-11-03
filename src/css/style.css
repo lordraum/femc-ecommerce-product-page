@@ -24,15 +24,15 @@ li {
 /* custom properties mobile */
 
 :root {
-  --primary-bg-clr: rgb(40, 53, 59);
+  --primary-bg-clr: hsl(0, 0%, 100%);
   --second-bg-clr: hsl(26, 100%, 55%);
   --third-bg-color: hsl(25, 100%, 94%);
-  --fourth-bg-color: hsl(215, 44%, 92%);
-  --primary-font-clr: rgb(171, 203, 230);
-  --secondary-font-clr: rgb(79, 123, 158);
+  --fourth-bg-color: hsla(240, 26%, 95%, 0.6);
+  --primary-font-clr: hsl(219, 9%, 45%);
+  --secondary-font-clr: hsl(0, 0%, 0%);
   --third-font-clr: hsl(26, 100%, 55%);
-  --fourth-font-clr: rgba(171, 203, 230, 0.5);
-  --fourth-bg-clr: rgba(40, 53, 59, 0.904);
+  --fourth-font-clr: hsla(220, 14%, 75%, 0.8);
+  --fourth-bg-clr: hsl(0, 0%, 100%);
   --hdr-wdt: 90%;
   --col-info-padding: 1.25em;
   --primary-fw: 400;
@@ -50,7 +50,8 @@ body {
   padding-bottom: 4rem;
 }
 
-.body-filter {
+.body-filter,
+.body-filter--lightbox {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
@@ -58,6 +59,10 @@ body {
   width: 100%;
   height: 100vh;
   z-index: 1;
+}
+
+.body-filter--lightbox {
+  display: none;
 }
 
 .header {
@@ -109,6 +114,11 @@ body {
 
 .menu__item {
   padding-block: 0.75em;
+}
+
+.menu__link {
+  color: var(--second-font-clr);
+  font-weight: var(--secondary-fw);
 }
 
 .menu--buyer {
@@ -286,6 +296,7 @@ body {
   margin-top: 1rem;
   height: 3rem;
   border-radius: var(--br);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .product__icon svg {
@@ -349,7 +360,7 @@ body {
 
 .cart__product span:nth-child(2) {
   font-weight: var(--secondary-fw);
-  color: var(--fourth-font-clr);
+  color: var(--secondary-font-clr);
 }
 
 .cart a {
@@ -360,6 +371,10 @@ body {
   padding: 1.25rem 1.75rem;
   border-radius: var(--br);
   text-align: center;
+}
+
+.lightbox {
+  display: none;
 }
 
 /* end mobile */
@@ -384,7 +399,8 @@ body {
 
   .toggle-menu,
   .product__thumbnail,
-  .product__icon {
+  .product__icon,
+  .cart__body div:nth-child(3) {
     cursor: pointer;
   }
 
@@ -457,6 +473,11 @@ body {
     max-width: 100%;
     height: auto;
     object-fit: fill;
+  }
+
+  .product__img,
+  .lightbox .product__img-container img:nth-child(1) {
+    cursor: pointer;
   }
 
   .product__img {
@@ -600,5 +621,9 @@ body {
 
   .lightbox .product__thumbnail {
     height: 100%;
+  }
+
+  .body-filter--lightbox {
+    display: block;
   }
 }
